@@ -1,0 +1,312 @@
+//contact
+
+.detail-inner-page .main-header {
+    position: relative;
+    & .main-menu .navigation > li > a {
+        color:  $theme-color-one;
+    }
+
+    & .nav-outer .mobile-nav-toggler {
+        color: $theme-color-one;
+    }
+}
+
+.banner-bg-color {
+    background:  $theme-color-one;
+    height: 300px;
+    padding: 0px 90px;
+    position: relative;
+
+    & .banner-breadcrump {
+        position: absolute;
+        top: 50%;
+        transform: translate(0,-50%);
+       
+    }
+}
+
+.banner-breadcrump {
+    & h2 {
+        font-weight: bold;
+        color: $text-color;
+    }
+
+    & .breadcrumb {
+        padding: 15px 0px;
+        margin-bottom: 0px;
+        background-color: transparent;
+
+        & li.breadcrumb-item a {
+            color: $text-color;
+        }
+    }
+}
+
+.banner-bgimg {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.banner-overlay-img {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+
+    & img {
+        height: 300px;
+    }
+}
+
+
+//contact
+.contact-section {
+    color: $paragh-color;
+    & .contact-icon {
+        font-size: 40px;
+        margin-right: 15px;
+        color: $theme-color-one;
+    }
+    & .contact-primary,
+    & .contact-secondary {
+        & h6 {
+            color: $theme-color-one;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+        & label {
+            margin-bottom: 30px;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    }
+    & .contact-info .cinfo {
+        margin-bottom: 60px;
+        & h6 {
+            color: $theme-color-one;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        & p {
+            color: $paragh-color;
+            font-size: 16px;
+            & a {
+                color: $paragh-color;
+            }
+        }
+
+        & table td {
+            padding-bottom: 15px !important;
+            font-size: 16px;
+            &.title {
+                padding-right: 15px;
+            }
+        }
+        
+    }
+    & .buttons-box {
+        margin-top: 60px;
+        & .btn-style-first {
+            text-align: center;
+            color: $theme-color-one;
+            border: 2px solid $theme-color-one;
+            &:before {
+                background-color: $theme-color-one;
+            }
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+    & .contact-social {
+        display: flex;
+        & li {
+            margin-right: 30px;
+            font-size: 20px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            & a {
+                color: $theme-color-one;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $theme-color-two;
+                }
+            }
+        }
+    }
+    & .contact-primary {
+        & .form-control {
+            padding: 30px 15px;
+            font-size: 16px;
+            color: $theme-color-one;
+            border-radius: 0px;
+            border-color: #efefef;
+
+            &:focus {
+                border-color: #efefef;
+                outline: 0;
+                box-shadow: none;
+            }
+            
+
+        }
+    }
+
+}
+
+.map-section {
+    margin-bottom: -7px;
+}
+
+@media  (max-width: 991.98px) {
+    .contact-primary {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    
+    .banner-overlay-img {
+        & img {
+            height: 100%;
+        }
+    }
+    .banner-breadcrump {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .banner-bgimg:before {
+        content: '';
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        position: absolute;
+        background: rgb(0 0 0 / 60%);
+    }
+}
+
+@media (max-width: 576.98px) {
+    .banner-breadcrump {
+        & h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+
+//admission-section
+.admission-info {
+    margin-bottom: 60px;
+    color: $paragh-color;
+    h4 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: $theme-color-one;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 20px;
+
+    }
+
+    ul, li {
+       list-style: square !important;
+       padding-left: 16px;
+       font-size: 18px;
+       margin-bottom: 20px;
+
+       &:last-child {
+           margin-bottom: 0px;
+       }
+    }
+
+    a {
+        color: $theme-color-one;
+        font-weight: bold;
+    }
+}
+
+
+//message-section
+.description-paragh {
+    p {
+        font-size: 18px;
+        text-align: justify;
+        margin-bottom: 20px;
+
+        b {
+            color: $theme-color-one;
+            font-weight: bold;
+        }
+
+    }
+
+    h4 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: $theme-color-one;
+    }
+
+
+    a {
+        color: $theme-color-one;
+        font-weight: bold;
+    }
+
+}
+
+
+.img-caption {
+    h4 {
+        color: $theme-color-one;
+    }
+}
+
+.listing-points {
+  ul {
+      padding-left: 16px;
+  }
+    li {
+        font-size: 18px;
+        text-align: justify;
+        margin-bottom: 20px;
+        list-style: square;
+        padding-left: 16px;
+
+    }
+}
+
+//montessori
+.montessori-section {
+    p {
+        color: $paragh-color;
+        font-size: 18px;
+    }
+}
+
+//program
+.program-category-section {
+    p {
+        font-size: 18px;
+        text-align: justify;
+        margin-bottom: 20px;
+
+    }
+
+
+    a {
+        color: $theme-color-one;
+        font-weight: bold;
+    }
+}
