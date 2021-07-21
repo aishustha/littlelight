@@ -2668,6 +2668,27 @@ img {
     max-height: inherit;
   }
 }
+body.modal-open {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-right: 0px !important;
+}
+
+.modalPopup .modal-header {
+  border: none;
+  padding: 30px;
+}
+.modalPopup p {
+  text-align: center;
+  font-size: 16px;
+  color: #282f5f;
+  font-weight: bold;
+}
+.modalPopup .modal-body {
+  padding: 30px;
+  padding-top: 0px;
+}
+
 .detail-inner-page .main-header {
   position: relative;
 }

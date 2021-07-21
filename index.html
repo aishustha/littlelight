@@ -15,10 +15,32 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/school.css" rel="stylesheet">
 
+
+
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modalPopup">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            We reopened in September with all students welcome to attend school in-person, six full days, and a plan to keep students and faculty safe.
+                        </p>
 
+                        <img src="./assets/images/Admission.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="body-wrapper position-relative">
         <!-- Preloader -->
         <div class="preloader"></div>
@@ -625,6 +647,8 @@
         jarallax(document.querySelectorAll('.jarallax-keep-img'), {
             keepImg: true,
         });
+
+        $('#staticBackdrop').modal('show')
     </script>
 </body>
 
