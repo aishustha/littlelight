@@ -81,6 +81,9 @@
                 }
                 
                 @media only screen and (max-width: 991.98px) {
+                    .about-section.section img {
+                        margin-bottom: 60px;
+                    }
                     #navbarSupportedContent {
                         display: block;
                     }
