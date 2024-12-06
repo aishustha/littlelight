@@ -44,3 +44,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     firebase.auth().signOut();
   }
   
+// form 
+  window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
+  }
