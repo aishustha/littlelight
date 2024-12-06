@@ -245,59 +245,17 @@
                                     <div class="buttons-box">
                                         <button type="submit" class="theme-btn btn-style-first" id="submit"><span class="txt">Submit</span></button>
                                     </div>
+                                    <p id="form-response" 
+                                    style="display: none;    
+                                    color: #282f5f;
+                                    margin-top: 60px;
+                                    font-weight: bold;
+                                    font-size: 20px;">
+                                    Thank you! We've received your message and will follow up shortly.
+                                </p>
                                 </form>
-
-
-                                <!-- <form class="needs-validation" novalidate>
-                                    <div class="form-group">
-                                        <label for="validationCustom01">Your Name</label>
-                                        <input type="name" class="form-control" id="validationCustom01"  required>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid fullname.
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="validationCustom02">Your Contact Number</label>
-                                        <input type="number" class="form-control" id="validationCustom02" required>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                          </div>
-                                          <div class="invalid-feedback">
-                                            Please provide a valid contact number.
-                                          </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="validationCustom03">Your Email Address</label>
-                                        <input type="email" class="form-control" id="validationCustom03" required>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                          </div>
-                                          <div class="invalid-feedback">
-                                            Please provide a valid email address.
-                                          </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="validationCustom05">How can we help you ?</label>
-                                        <textarea class="form-control" id="validationCustom05" rows="5" required></textarea>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                          </div>
-                                          <div class="invalid-feedback">
-                                            Please provide a valid message.
-                                          </div>
-                                    </div>
-                                    <div class="buttons-box">
-                                        <button class="theme-btn btn-style-first" type="submit">
-                                            <span class="txt">Submit</span>
-                                        </button>
-                                    </button>
-                                  </form> -->
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -429,18 +387,6 @@
     <!--End pagewrapper-->
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target="html"><i class="fas fa-chevron-up"></i></div>
-
-    
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
-    <script src="main.js"></script> -->
-
-
-
     <script src="assets/vendor/jquery/jquery.js"></script>
     <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -463,26 +409,29 @@
             keepImg: true,
         });
     </script>
-
-<!--     
     <script>
-        (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            var forms = document.getElementsByClassName('needs-validation');
-            var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+        
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset();
+                    document.getElementById('form-response').style.display = 'block'; // Show success message
+                } else {
+                    alert('Oops! There was a problem submitting your form.');
                 }
-                form.classList.add('was-validated');
-            }, false);
+            }).catch(error => {
+                alert('Error: ' + error.message);
             });
-        }, false);
-        })();
-    </script> -->
-   
+        });
+    </script>
+        
   
 </body>
 
